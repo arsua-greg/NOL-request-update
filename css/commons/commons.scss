@@ -1,0 +1,1135 @@
+@charset "utf-8";
+
+$more: 'IBM Plex Sans', sans-serif;
+$fontcolor: black;
+$base1: #eaeef1;
+$base2: #ffbe00;
+$base3: #ffd700;
+$gray: #eaeef1;
+
+
+$breakpoints: (
+    'sm': 'screen and (max-width: 480px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 1024px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+
+$base_space2: 20px;
+$base_space3: 30px;
+$base_space5: 50px;
+$base_space6: 60px;
+
+/*==========================================
+共通スタイル
+===========================================*/ 
+
+html {
+    font-size: 62.5%;
+}
+body {
+    -webkit-text-size-adjust: 100%;
+    text-align: justify;
+    letter-spacing: 1;
+    line-height: 1.8;
+    font-size: 1.6rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: white;
+
+    @include mq(){
+        font-size: 1.6rem;
+    }
+}
+
+.bg_gray{
+    background-color:$gray;
+}
+.bg_black{
+    background-color: black;
+}
+.bg_yellow{
+    background-color: $base1;
+}
+.border_b_black{
+    border-bottom: 1px solid black;
+}
+.border_dash_b_black{
+    border-bottom: 1px dashed black;
+}
+/*==========================================
+width,height
+===========================================*/
+.p0{
+    padding: 0 !important;
+}
+
+.padding_t60{
+    padding-top: 60px !important;
+}
+.padding_rl30{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.padding_b40{
+    padding-bottom: 40px;
+}
+@include mq(sm){ 
+    .sp_padding_b40{
+        padding-bottom: 40px !important;
+    }
+}
+.padding_b120{
+    padding-bottom: 120px;
+}
+.margin_b170{
+    padding-bottom: 170px;
+}
+.w460{
+    max-width: calc(460px + 60px);
+    padding: 0 $base_space3;
+    margin: 0 auto;
+}
+.w470{
+    max-width: calc(470px + 60px);
+    padding: 0 $base_space3;
+    margin: 0 auto;
+}
+.w560{
+    max-width: calc(560px + 60px);
+    padding: 0 $base_space3;
+    margin: 0 auto;
+}
+.w600{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.w720{
+    max-width: 720px;
+    margin: 0 auto;
+}
+.w785{
+    max-width: calc(785px + 60px);
+    padding: 0 $base_space3;
+    margin: 0 auto;
+}
+.w820{
+    max-width: 820px;
+    margin: 0 auto;
+}
+.w1100{
+    max-width: calc(1100px + 60px);
+    padding: 0 $base_space3;
+    margin: 0 auto;
+}
+.w1200{
+    max-width: calc(1200px + 60px);
+    padding: 0 $base_space3;
+    margin: 0 auto;
+}
+
+
+
+/*=== フォント ===*/
+.ja{
+    font-family: '游明朝','Yu Mincho','YuMincho','游明朝体',serif;
+}
+.en{
+    font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+}
+
+.txt_c{
+    text-align: center;
+}
+.txt_r{
+    text-align: right;
+}
+.fwb{
+    font-weight: bold;
+}
+.fwn{
+    font-weight: 400;
+}
+
+.fcw{
+    color: white;
+}
+
+.lh1{
+    line-height: 1;
+}
+
+.fz14{
+    font-size: 1.4rem;
+}
+.fz16{
+    font-size: 1.6rem;
+}
+.fz20{
+    font-size: 2.0rem;
+}
+.fz22{
+    font-size: 2.2rem;
+}
+.fz24{
+    font-size: 2.4rem;
+}
+.fz26{
+    font-size: 2.6rem;
+}
+.fz28{
+    font-size: 2.8rem;
+}
+.fz32{
+    font-size: 3.2rem;
+}
+.fz34{
+    font-size: 3.4rem;
+}
+.fz40{
+    font-size: 4.0rem;
+    line-height: 1.2;
+}
+.fz50{
+    font-size: 5.0rem;
+    line-height: 1.2;
+}
+.fz60{
+    font-size: 6.0rem;
+    line-height: 1.2;
+}
+
+
+/*=== メディアクエリ ===*/
+
+.sp{
+    display: none;
+    @include mq(){
+        display: block;
+    }
+}
+.mb{
+    display: none;
+    @include mq(sm){
+        display: block;
+    }
+}
+@include mq(){
+    .pc{
+        display: none;
+    }
+}
+@include mq(sm){
+    .pcmb{
+        display: none;
+    }
+}
+
+
+/*==========================================
+hover アニメーション
+===========================================*/ 
+.hover_zoom{
+    transition: all .3s;
+    .hover_img{
+        overflow: hidden;
+        img{
+            transition: all 1s;
+        }
+    }
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+}
+img{
+    width: 100%;
+}
+
+a{
+    color: black;
+    transition: all .3s;
+    &:hover{
+        color: $base2;
+    }
+}
+
+/*==========================================
+display
+===========================================*/ 
+.display_f{
+    display: flex;
+    @include mq(){
+        display: block;
+    }
+}
+.sp_display_f{
+    display: flex;
+}
+
+.f_wrap{
+    flex-wrap: wrap;
+}
+.justify-sb{
+    justify-content: space-between;
+}
+.justify-e{
+    justify-content: space-evenly;
+}
+.justify-c{
+    justify-content: center;
+}
+
+/*=== position ===*/
+.posi_r{
+    position: relative;
+}
+.posi_a{
+    position: absolute;
+}
+
+
+/*============
+アニメーション
+=============*/
+.setAnime{
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+}
+.delayItem{
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+}
+.fadeRight{
+    opacity: 0;
+    transform: translateX(30px);
+}
+.fadeRight.animated{
+    opacity: 1;
+    transform: translate(0);
+}
+.fadeLeft{
+    opacity: 0;
+    transform: translateX(-30px);
+}
+.fadeLeft.animated{
+    opacity: 1;
+    transform: translate(0);
+}
+.fadeIn{
+    opacity: 0;
+}
+.fadeIn.animated{
+    opacity: 1;
+}
+.fadeUp{
+    opacity: 0;
+    transform: translateY(20px);
+}
+.fadeUp.animated{
+    opacity: 1;
+    transform: translate(0);
+}
+.fadeDown{
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.fadeDown.animated{
+    opacity: 1;
+    transform: translate(0);
+}
+.rotateRight{
+    opacity: 0;
+    transform: rotate3d(3, 4, 1, 85deg);
+    transition-duration: 600ms;
+}
+.rotateRight.animated{
+    opacity: 1;
+    transform: rotate3d(1,1,1,0);
+}
+.rotateLeft{
+    opacity: 0;
+    transform: rotate3d(21, 20, -10, -85deg);
+    transition-duration: 600ms;
+}
+.rotateLeft.animated{
+    opacity: 1;
+    transform: rotate3d(1,1,1,0);
+}
+.rotate{
+    opacity: 0;
+    transform: rotate3d(1, 0, 0, -90deg);
+    transition-duration: 600ms;
+}
+.rotate.animated{
+    opacity: 1;
+    transform: rotate3d(1,1,1,0);
+}
+
+
+
+.section{
+    margin-top: 100px;
+    @include mq(sm){
+        margin-top: 60px;
+    }
+}
+.ttl_bg{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    margin: 0 auto 70px;
+    font-weight: bold;
+    text-align: center;
+    background-image: url(../../img/ttl_bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    @include mq(sm){
+        margin: 0 auto 40px;
+    }
+}
+.ttl_wrap{
+    margin: 0 auto;
+}
+.ttl_en{
+    display: block;
+    font-size: 5.6rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+    .blank{
+        width: 1rem;
+        display: inline-block;
+    }
+    span{
+        opacity: 0;
+    }
+    span.isShow{
+        opacity: 1;
+    }
+    @include mq(sm){
+        &.ttl_en_min{
+            font-size: 4.6rem;
+        }
+    }
+}
+.sp_ttl_en_block{
+    @include mq(){
+        line-height: 1;
+        margin-bottom: 30px;
+        .sp_block{
+            display: block;
+        }
+    }
+}
+.hr_arrow{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    @include mq(){
+        display: block;
+    }
+}
+.hr_arrow:before {
+    content: "";
+    position: absolute;
+    bottom: -21px;
+    left: 50%;
+    margin-left: -15px;
+    border: 13px solid transparent;
+    border-top: 13px solid #FFF;
+    z-index: 2;
+}
+.hr_arrow:after {
+    content: "";
+    position: absolute;
+    bottom: -27px;
+    left: 50%;
+    margin-left: -17px;
+    border: 15px solid transparent;
+    border-top: 15px solid black;
+    z-index: 1;
+}
+/*============
+ボタン
+=============*/
+.btn{
+    padding: 14px 0;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: white;
+    &:hover{
+        color: white;
+        background-color: $base2;
+        .arrow{
+            left: 20px;
+            background-color: white;
+            &:before{
+                border-left: 5px solid white;
+            }
+        }
+    }
+}
+.arrow {
+    display:inline-block;
+    height:1px;
+    width:15px;
+    background-color:black;
+    position:relative;
+    top: -6px;
+    left: 10px;
+    transition: 0.3s all;
+}
+.arrow:before {
+    position:absolute;
+    content:"";
+    width:0;
+    height:0;
+    border: 5px solid transparent;
+    border-left: 5px solid black;
+    left: 14px;
+    top: -4px;
+    transition: 0.3s all;
+}
+/*==========================================
+other ヘッダー
+===========================================*/
+.pc_gnav_wrap{
+    position: absolute;
+    justify-content: space-between;
+    width: 100vw;
+    top: 0;
+    z-index: 100;
+    .h_logo{
+        padding: 30px 0 0 30px;
+        width: 340px;
+    }
+    @include mq(){
+        display: none;
+    }
+}
+.sp_gnav_wrap{
+    position: fixed;
+    bottom: 0;
+    transform:translateY(100vh);
+    transition: 0.3s all;
+    &.isShow{
+        transform:translateY(0);
+    }
+    @include mq(){
+        z-index: 30;
+    }
+}
+.pc_gnav{
+    padding: 30px 30px 0 30px;
+    li{
+        width: 120px;
+        margin: 0 8px;
+        padding: 0 0 8px;
+        text-align: center;
+        border-bottom: 1px solid white;
+        a{
+            color: white;
+            font-size: 2.0rem;
+            font-weight: bold;
+        }
+        span{
+            display: block;
+            font-size: 1.4rem;
+            font-weight: normal;
+        }
+        &:hover{
+            border-bottom: 1px solid $base3;
+            a{
+                color: $base3;
+            }
+        }
+    }
+}
+
+/*============
+nav
+=============*/
+#navArea{
+    .pc_gnav{
+        padding: 0;
+        li{
+            margin-top: 20px;
+        }
+    }
+    nav {
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        //height: calc(100vh - 80px);
+        bottom: 80px;
+        background: black;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transition: all .5s;
+        z-index: 150;
+        opacity: 0;
+        @include mq(sm){
+            height: calc(100vh - 70px);
+            bottom: 70px;
+        }
+    }
+    &.open nav {
+        opacity: 1;
+    }
+    nav .inner ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav .inner ul li {
+        position: relative;
+        margin: 0;
+    }
+    nav .inner ul li a {
+        display: block;
+        color: #333;
+        font-size: 14px;
+        padding: 1em;
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+    nav .nav_close_btn{
+        cursor: pointer;
+        font-weight: 600;
+        padding: 13px 0;
+        text-align: center;
+        background-color: $base2;
+    }
+}
+.sp_gnav_inner{
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    @include mq(sm){
+        width: 90%;
+    }
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: black;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 200;
+    @include mq(sm){
+        width: 70px;
+        height: 70px;
+    }
+}
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 17px;
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all .5s;
+    @include mq(sm){
+        left: 15px;
+    }
+}
+.toggle_btn span:nth-child(1) {
+    top: 30px;
+    @include mq(sm){
+        top: 25px;
+    }
+}
+.toggle_btn span:nth-child(2) {
+    bottom: 30px;
+    @include mq(sm){
+        bottom: 26px;
+    }
+}
+.open .toggle_btn span:nth-child(1) {
+    transform: translateY(12px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+    transform: translateY(-5px) rotate(315deg);
+}
+.front_nav{
+    nav{
+        transform: translateX(-100vh);
+    }
+    &.open nav {
+        transform: translateX(0);
+    }
+}
+/*============
+#mask
+=============*/
+#mask {
+    display: none;
+    transition: all .5s;
+}
+.open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 20;
+    cursor: pointer;
+}
+
+/*============
+#sp header navwrap
+=============*/
+
+.h_ico_wrap{
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    width: 80px;
+    height: 80px;
+    background-color: $gray;
+    .cls-1{fill:none;}
+    .cls-2{
+        fill: #597777;
+    }
+    @include mq(sm){
+        left: 70px;
+        width: 70px;
+        height: 70px;
+    }
+}
+.tryout_icon{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background-color: $base3;
+    overflow: hidden;
+    a{
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 125px;
+        transform: translate(-50%,0);
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 210px;
+        height: 150px;
+        top: 40px;
+        left: -30px;
+        background-color: #ffbe00;
+        border-radius: 150% 0 0 0;
+
+    }
+    @include mq(){
+        bottom: 0;
+        left: 160px;
+        width: calc(100vw - 160px);
+        height: 80px;
+        img{
+            top: 13px;
+            width: 155px;
+        }
+        &::before{
+            height: 100px;
+            top: 20px;
+            left: 0px;
+            width: calc(100vw - 160px);
+            border-radius: 100% 0 0 0;
+        
+        }
+    }
+    @include mq(sm){
+        width: calc(100vw - 140px);
+        height: 70px;
+        left: 140px;
+        &::before{
+            top: 10px;        
+            width: calc(100vw - 140px);
+        }
+    }
+}
+
+.top.other_top{
+    height: 500px;
+    min-height: 500px;
+    .main_ttl{
+        top: 57%;
+        font-size: 5.6rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+        line-height: 1;
+        span{
+            display: block;
+            margin-top: 30px;
+            font-size: 1.6rem;
+            font-weight: normal;
+        }
+    }
+    @include mq(){
+        height: 100vh;
+    }
+    @include mq(sm){
+        .main_wrap{
+            top: 40%;
+        }
+    }
+}
+.t_logo{
+    width: 320px;
+    margin: 0 auto;
+    @include mq(sm){
+        width: 160px;
+    }
+}
+.bread{
+    font-size: 1.4rem;
+    padding: 18px 30px 30px;
+    li{
+        display: inline;
+        &:before{
+            content: ">";
+            display: inline;
+            padding: 0 2px;
+        }
+        &:first-child{
+            &:before{
+                display: none;
+            }
+        }
+        a{
+            display: inline;
+        }
+    }
+}
+
+
+.triangle{
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -15px;
+        border: 15px solid transparent;
+        border-top: 15px solid white;
+    }
+    &.triangle_gray{
+        &::before{
+            border-top: 15px solid $gray;
+        }
+    }
+    &.triangle_yellow{
+        &::before{
+            border-top: 15px solid $base3;
+        }
+    }
+}
+
+/*==========================================
+contact ヘッダー
+===========================================*/
+
+.contact{
+    position: relative;
+    padding: 0 0 70px;
+    &.entry_tryout{
+        color: black;
+        padding: 140px 0 70px;
+        background-color: $base3;
+    }
+    
+    dl{
+        padding-top: 70px;
+        dt,
+        dd{
+            line-height: 1.4;
+            margin-bottom: 40px;
+        }
+        dt{
+            width: 140px;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+        dd{
+            width: calc(100% - 140px);
+        }
+        p{
+            width: 100%;
+        }
+        @include mq(sm){
+            dt,
+            dd{
+                width: 100%;
+            }
+            dt{
+                margin-bottom: 5px;
+            }
+            dd{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    input,
+    textarea{
+        width: 100%;
+        padding: 8px;
+        border: none;
+        font-size: 1.6rem;
+        border: 1px solid #c8c8c8;
+        border-radius: 0 !important;
+        -webkit-appearance: none;
+    }
+    .btn{
+        position: relative;
+        cursor: pointer;
+        padding: 15px 0;
+        color: white;
+        text-align: center;
+        font-size: 1.6rem;
+        border: 2px solid white;
+        background-color: black;
+        transition: .3s all;
+        &:hover{
+            color: black;
+            background-color: white;
+        }
+    }
+}
+.btn.wpcf7-back{
+    color: white;
+    border: 1px solid black;
+    transition: .3s all;
+    &:hover{
+        border-bottom: 1px solid white;
+    }
+}
+.custom-wpcf7c-confirmed .wpcf7-form-control-wrap{
+	input.wpcf7-text{
+        color: black !important;
+        background-color: #dbeafd !important;
+    }
+}
+.contact input .wpcf7-checkbox input,
+.entry_tryout .wpcf7-checkbox input{
+    width: auto;
+    -webkit-appearance: checkbox;
+}
+.birth .wpcf7-date{
+
+    height: 35px;
+    -webkit-appearance: textarea;
+}
+.wpcf7-list-item{
+    margin: 0 0 0 30px !important;
+    &:first-child{
+        margin: 0 !important;
+    }
+}
+.wpcf7c-conf{
+    color: black !important;
+    background-color: #dbeafd !important;
+}
+textarea:-webkit-autofill,
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #dbeafd inset;
+}
+.wpcf7-not-valid-tip{
+    font-size: 1.4rem !important;
+}
+
+.contact_note{
+    padding: 30px 0 0;
+}
+
+.entry_tryout{
+    input,
+    textarea{
+        border: 1px solid black;
+    }
+    dt{
+        font-weight: bold;
+    }
+    .btn{
+        border: none;
+    }
+}
+
+.wpcf7-select{
+    padding: 0 10px 0 0;
+    padding: 8px;
+    font-size: 1.6rem;
+    border-radius: 0 !important;
+    border: 1px solid black;
+    -webkit-appearance: none;
+    background-color: white;
+}
+.old .wpcf7-select,
+.aspiration .wpcf7-select,
+.size .wpcf7-select{
+    width: 150px;
+}
+
+.tall,
+.weight,
+.left,
+.right{
+    .wpcf7-text{
+        width: 90px;
+        margin-right: 10px;
+    }
+}
+.eye_wrap{
+    .wpcf7-text{
+        margin: 30px 0 0 10px;
+    }
+}
+.driving_note{
+    font-size: 1.4rem ;
+}
+.entry_tryout_note{
+    padding: 21px 0;
+    margin-top: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-color: red;
+}
+/*==========================================
+footer
+===========================================*/
+.footer{
+    padding: 200px 0 80px;
+    .copyright{
+        margin-top: 60px;
+        color: white;
+    }
+    .pc_gnav{
+        padding: 0;
+    }
+    @include mq(){
+        padding: 110px 0 130px;
+
+    }
+}
+.f_logo{
+    width: 498px;
+    margin: 0 auto 40px;
+    @include mq(){
+        width: 260px;
+        margin: 0 auto 70px;
+    }
+}
+.f_sns{
+    position: absolute;
+    bottom: 0;
+    //right: 0;
+    right: 80px;
+    li svg{
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+        .cls-1{
+            fill: $base3;
+        }
+    }
+    @include mq(){
+        position: inherit;
+        bottom: inherit;
+        right: inherit;
+        li{
+            margin-bottom: 40px;
+
+        }
+        li svg{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+.f_pc_gnav{
+    padding: 0 30px;
+    justify-content: center;
+    @include mq(){
+        width: 500px;
+        margin: 0 auto;
+        padding: 0 20px;
+        li{
+            margin-bottom: 40px;
+        }
+    }
+    @include mq(sm){
+        width: 100%;
+    }
+}
+.f_bnr{
+    margin-top: 90px;
+    li{
+        width: calc((100% - 75px) / 4);
+    }
+    @include mq(){
+        margin-top: 60px;
+    }
+    @include mq(sm){
+        display: block;
+        li{
+            width: 100%;
+        }
+
+    }
+}
+
+
+/*==========================================
+pdf
+===========================================*/
+.pdf_link{
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    margin-top: 10px;
+    img{
+        width: 25px;
+        margin-right: 10px;
+        
+    }
+}
+.txt_triangle{
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 5px 10px 5px 70px;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: $base2 transparent transparent transparent;
+}

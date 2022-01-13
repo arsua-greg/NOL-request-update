@@ -1,0 +1,258 @@
+@charset "UTF-8";
+.logoUd{
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+/*
+.h_ico_wrap {
+    left: 0;
+}
+
+.toggle_btn {
+    left: 70px;
+}
+
+.h_ico_wrap img{
+    position: absolute;
+    left: 5px;
+    top:5px;
+}
+*/
+.pc_gnav li {
+    width: calc(50% - 16px);
+}
+
+.pc_gnav li a{
+    font-size: 4.5vw;
+}
+
+.pc_gnav li a span{
+    font-size: 3.5vw;
+}
+
+.w950{
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+}
+
+.w850{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.w500{
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+}
+/*==========================================
+求人情報
+===========================================*/
+.recruitSec01{
+    font-size: 14px;
+}
+
+.recruitSec02List{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recruitSec02List li{
+    width: calc((100% - 15px) / 2);
+}
+
+.recruitSec02List li a{
+    font-size: 16px;
+}
+
+.recruitSec03List{
+    display: block;
+}
+
+.recruitSec03List li{
+    width: 100%;
+}
+
+.recruitSec03List li:nth-child(odd){
+    border-right:none;
+    padding-right: 0;
+}
+
+.recruitSec03List li:nth-child(even){
+    padding-left: 0;
+}
+
+.recruitSec03List--Box table{
+    width: 100%;
+    margin-bottom: 50px;
+    display: block;
+}
+
+.recruitSec03List--Box table th{
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    padding-top: 20px;
+    font-size: 16px;
+    vertical-align: top;
+    border-bottom: none;
+}
+
+.recruitSec03List--Box table td{
+    display: block;
+    padding: 5px 0;
+    padding-bottom: 20px;
+    font-size: 14px;
+    vertical-align: top;
+    border-bottom: 1px solid #000000;
+}
+
+
+.recruitSec03List--Box table tbody,
+.recruitSec03List--Box table tr{
+    display: block;
+    width: 100%;
+}
+
+.recruitSec03List--Box a{
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 15px;
+}
+.recruitSec03List--Box a:hover{
+    color: #ffbe00;
+}
+
+.rexuruitSec03--Btn a::before{
+    right: 15px;
+}
+
+.rexuruitSec03--Btn a::after{
+    right: 13px;
+}
+
+
+/*==========================================
+応募画面
+===========================================*/
+.appltSec01{
+    font-size: 14px;
+}
+
+.applyTable *{
+    box-sizing: border-box;
+}
+
+.applyTable,.applyTable tbody,.applyTable tr,.applyTable th,.applyTable td{
+    padding-bottom:0;
+    width: 100%;
+    text-align: left;
+    display: block;
+    font-size: 14px;
+}
+
+.applyTable td{
+    margin-bottom: 30px;
+}
+
+.applyTable .select{
+    width: 80px;
+}
+
+
+/*==========================================
+スポンサー
+===========================================*/
+.sponsorsList01 li{
+    width:100%;
+}
+
+.sponsorsList01 li a{
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.sponsorsList02 li{
+    width:calc((100% - 10px) / 2);
+}
+
+.sponsorsList02 li a{
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.sponsorsList03 li{
+    width:calc((100% - 20px) / 3);
+}
+
+.sponsorsList03 li a{
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/*==========================================
+会社概要
+===========================================*/
+.memberSec01{
+    display: block;
+    margin-bottom: 130px;
+}
+
+
+.memberText01{
+    font-size: 16px;
+    letter-spacing: 0;
+    margin-top: 20px;
+}
+
+.memberText02{
+    font-size: 18px;
+    letter-spacing: 0;
+}
+
+.memberText03{
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+.memberText04{
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+.memberSec01--box01{
+    width: 100%;
+}
+
+.memberSec01--box01 img{
+    width: 100%;
+}
+
+.memberSec01--box02{
+    width: 100%;
+    padding-left: 0;
+}
+
+.memberSec02{
+    display: block;
+}
+
+.memberSec02 li{
+    margin-bottom: 50px;
+    width:100%;
+}
+
+.memberSec02--box01__01{
+    width: 120px;
+}
+
+.memberSec02--box01__02{
+    width: calc(100% - 120px);
+    padding-left: 20px;
+    letter-spacing: 0;
+}
+
+.memberSec02 .memberText04{
+    margin-top: 20px;
+}

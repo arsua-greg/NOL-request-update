@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/*==========================================
+トライアウト
+===========================================*/
+.description {
+  padding: 20px 0 120px;
+}
+
+@media screen and (max-width: 480px) {
+  .description .w560 {
+    padding: 0 20px;
+  }
+  .description .ttl_bg {
+    margin: 0 auto 90px;
+  }
+  .description .ttl_en {
+    font-size: 4.6rem;
+  }
+}
+
+.desctiption_txt {
+  padding-bottom: 90px;
+  margin-bottom: 80px;
+}
+
+.desctiption_txt h3,
+.desctiption_txt h4,
+.desctiption_txt .title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.desctiption_txt h5 {
+  padding-bottom: 6px;
+}
+
+.desctiption_txt p, .desctiption_txt div {
+  padding-bottom: 40px;
+}
+
+.desctiption_txt.desctiption_margin_min {
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+.desctiption_txt ul li {
+  text-indent: -1.6rem;
+  padding-left: 2rem;
+}
+
+.desctiption_txt.desctiption_txt_last p:last-child {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .desctiption_txt {
+    font-size: 1.4rem;
+  }
+  .desctiption_txt.desctiption_margin_min {
+    padding-bottom: 0;
+  }
+  .desctiption_txt ul li {
+    text-indent: -14px;
+    padding-left: 14px;
+  }
+}
+
+.description_last.desctiption_txt {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.description_last.border_b_black {
+  border-bottom: 0;
+}
+/*# sourceMappingURL=tryout.css.map */

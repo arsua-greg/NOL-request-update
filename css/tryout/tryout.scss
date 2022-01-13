@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+$more: 'IBM Plex Sans', sans-serif;
+$fontcolor: #2b2e48;
+$base1: #2b2e48;
+$base2: #b8966d;
+$gray: #eaeef1;
+
+
+$breakpoints: (
+    'sm': 'screen and (max-width: 480px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 1024px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+$base_space2: 20px;
+$base_space3: 30px;
+$base_space5: 50px;
+$base_space6: 60px;
+
+/*==========================================
+トライアウト
+===========================================*/
+
+.description{
+    padding:  20px 0 120px;
+    @include mq(sm){
+        .w560{
+            padding: 0 20px;
+        }
+        .ttl_bg {
+            margin: 0 auto 90px;
+        }
+        .ttl_en{
+            font-size: 4.6rem;
+        }
+    }
+}
+.desctiption_txt{
+    padding-bottom: 90px;
+    margin-bottom: 80px;
+    h3,
+    h4,
+    .title{
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    h5{
+        padding-bottom: 6px;
+    }
+    p,div{
+        padding-bottom: 40px;
+    }
+    &.desctiption_margin_min{
+        padding-bottom: 50px;
+        margin-bottom: 40px;
+    }
+    ul li{
+        text-indent: -1.6rem;
+        padding-left: 2rem;
+    }
+    &.desctiption_txt_last{
+        p{
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+    @include mq(sm){
+        font-size: 1.4rem;
+        &.desctiption_margin_min{
+            padding-bottom: 0;
+        }
+        ul li{
+            text-indent: -14px;
+            padding-left: 14px;
+        }
+    }
+}
+
+.description_last{
+    &.desctiption_txt{
+            padding-bottom: 0;
+            margin-bottom: 0;
+    }
+    &.border_b_black{
+        border-bottom: 0;
+    }
+}
