@@ -65,7 +65,7 @@
           width: 100%;
           text-align: center;
         }
-        &:hover{
+        &:hover {
           background-color: black;
         }
       }
@@ -135,18 +135,16 @@
         */
       }
 
-
       .cat-item-all,
       .cat-item-toyama,
       .cat-item-ishikawa,
-      .cat-item-shiga{
-        a{
-          
+      .cat-item-shiga {
+        a {
           width: 100%;
         }
       }
-      .cat-item-all{
-        a{
+      .cat-item-all {
+        a {
           text-align: center;
         }
       }
@@ -154,13 +152,12 @@
       .cat-item-toyama,
       .cat-item-ishikawa,
       .cat-item-fukui,
-      .cat-item-shiga{
-        a{
+      .cat-item-shiga {
+        a {
           text-align: right;
           width: 100%;
         }
       }
-      
 
       .cat-item-all {
         a {
@@ -175,7 +172,7 @@
         opacity: 1;
         border: 2px solid black;
         transition: 0.3s all;
-        &:hover{
+        &:hover {
           opacity: 0.8;
         }
       }
@@ -462,7 +459,7 @@
             color: #fff;
           }
         }
-        
+
         &::before {
           position: absolute;
           content: "";
@@ -580,6 +577,9 @@
           margin: 0 15px 0 0;
         }
       }
+      .cat-item-team {
+        display: none;
+      }
     }
 
     .news_content {
@@ -594,7 +594,6 @@
       &__item {
         position: relative;
         &--cont {
-          
           padding: 40px;
           border-bottom: 2px solid #000;
           position: relative;
@@ -611,7 +610,7 @@
           @media only screen and(max-width: 768px) {
             padding: 40px 20px;
           }
-          
+
           .title {
             display: flex;
             align-items: center;
@@ -643,9 +642,9 @@
                 font-weight: 700;
                 margin: 5px 10px 5px 0;
                 padding: 0 5px;
-                &:hover{
+                &:hover {
                   background-color: black;
-                  a{
+                  a {
                     color: white;
                   }
                 }
@@ -886,22 +885,22 @@
         }
       }
     }
-    .easy-wp-page-navigation{
+    .easy-wp-page-navigation {
       margin: 60px 0 0 !important;
     }
 
     .easy-wp-page-navigation a.page-numbers:hover,
-    .easy-wp-page-navigation a.first-page-link:hover, 
+    .easy-wp-page-navigation a.first-page-link:hover,
     .easy-wp-page-navigation a.last-page-link:hover,
-    .easy-wp-page-navigation span.current{
+    .easy-wp-page-navigation span.current {
       background: #fff;
       color: #ffbe00;
     }
 
     .easy-wp-page-navigation a.next:hover,
-    .easy-wp-page-navigation a.prev:hover{
-        color: #000;
-        background: #ffbe00;
+    .easy-wp-page-navigation a.prev:hover {
+      color: #000;
+      background: #ffbe00;
     }
 
     .easy-wp-page-navigation a,
@@ -913,7 +912,6 @@
       color: #000;
       padding: 8px;
     }
-
 
     .easy-wp-page-navigation a.prev,
     .easy-wp-page-navigation a.next {
@@ -985,13 +983,12 @@
           top: 5px;
           position: absolute;
         }
-        
       }
     }
   }
 
   .post_details {
-    max-width: 550px;
+    // max-width: 550px;
     margin: 0 auto;
 
     .line {
@@ -1023,12 +1020,12 @@
       &--details {
         padding: 0 40px;
         text-align: left;
-        a{
+        a {
           display: inline-block;
           font-weight: bold;
           text-decoration: underline;
           font-size: 15px;
-          &:hover{
+          &:hover {
             color: #ffbe00;
           }
         }
@@ -1055,7 +1052,7 @@
         .post_ttl {
           display: flex;
           align-items: center;
-          justify-content: left;
+          justify-content: space-between;
           flex-wrap: wrap;
 
           .tags {
@@ -1064,7 +1061,7 @@
             justify-content: left;
             align-items: center;
             margin-left: 10px;
-            a{
+            a {
               text-decoration: none !important;
             }
             @media only screen and(max-width: 768px) {
@@ -1082,21 +1079,20 @@
                 font-weight: 700;
                 margin: 5px 10px 5px 0;
                 padding: 0 5px;
-                &:hover{
+                &:hover {
                   background-color: black;
-                  a{
+                  a {
                     color: white;
                   }
                 }
-                
-                a{
+
+                a {
                   text-decoration: none !important;
                 }
                 @media only screen and(max-width: 768px) {
                   min-width: inherit;
                 }
               }
-              
             }
 
             .all {
@@ -1318,6 +1314,8 @@
 
       .a-post-img-cont {
         padding: 40px 0;
+        max-width: 570px;
+        margin: 0 auto;
 
         @media only screen and(max-width: 768px) {
           padding: 60px 0 40px 0;
@@ -1334,7 +1332,6 @@
       display: flex;
       align-items: center;
 
-
       .p-pagination-width {
         width: 50%;
 
@@ -1350,17 +1347,17 @@
           font-family: noto-sans-cjk-jp, sans-serif;
           border: 2px solid #000;
           background-color: white;
-          transition: .3s all;
+          transition: 0.3s all;
         }
-        svg{
+        svg {
           padding-top: 3px;
         }
-        
-        &:hover{
-            a{
-              background-color: #ffbe00;
-              color: black;
-            }
+
+        &:hover {
+          a {
+            background-color: #ffbe00;
+            color: black;
+          }
         }
         &:nth-of-type(1) {
           display: flex;
@@ -1369,9 +1366,7 @@
 
           svg {
             margin-right: 20px;
-            
           }
-          
         }
 
         &:nth-of-type(2) {
@@ -1384,13 +1379,10 @@
           }
         }
       }
-      
-
     }
   }
 }
-.article_back{
-
+.article_back {
   display: block;
   padding: 6px 5px 8px;
   line-height: 1;
@@ -1400,11 +1392,10 @@
   font-family: noto-sans-cjk-jp, sans-serif;
   border: 2px solid #000;
   background-color: white;
-  transition: .3s all;
+  transition: 0.3s all;
   margin: 20px auto 135px auto;
-  &:hover{
-      background-color: #ffbe00;
-      color: black;
+  &:hover {
+    background-color: #ffbe00;
+    color: black;
   }
 }
-

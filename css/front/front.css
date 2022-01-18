@@ -303,7 +303,7 @@
 }
 
 .logo_name {
-  width: 230px;
+  width: 200px;
   margin: 0 auto;
   z-index: 20;
 }
@@ -495,7 +495,7 @@ message
       -ms-flex-pack: center;
           justify-content: center;
   line-height: 1;
-  font-size: 7.0rem;
+  font-size: 7rem;
   font-weight: bold;
 }
 
@@ -537,7 +537,7 @@ message
 }
 
 .min_date_wrap .date span {
-  font-size: 7.0rem;
+  font-size: 7rem;
 }
 
 .min_date_wrap .date.year {
@@ -547,7 +547,7 @@ message
 }
 
 .min_date_wrap .date.year span {
-  font-size: 4.0rem;
+  font-size: 4rem;
 }
 
 .min_date_wrap .date_txt {
@@ -729,8 +729,8 @@ message
 .f_team_logo a {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: .3s all;
-  transition: .3s all;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .f_team_logo a:hover {
@@ -775,8 +775,8 @@ message
 
 .sns li svg .cls-1 {
   fill: white;
-  -webkit-transition: .3s all;
-  transition: .3s all;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .sns li svg .cls-2 {
@@ -791,11 +791,11 @@ message
 }
 
 .sns li:hover svg.insta .cls-1 {
-  fill: #CF2E92;
+  fill: #cf2e92;
 }
 
 .sns li:hover svg.twitter .cls-1 {
-  fill: #1DA1F2;
+  fill: #1da1f2;
 }
 
 .sns li:hover svg.facebook .cls-1 {
@@ -883,7 +883,7 @@ teams
 .teams li h3 {
   margin: 40px 0 20px;
   font-weight: 500;
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 1.2;
 }
 
