@@ -146,6 +146,7 @@ $(function () {
   //ナビゲーション
   var $nav = $("#navArea");
   var $btn = $(".toggle_btn");
+  var $btn2 = $(".news_toggle_btn");
   var $mask = $("#mask");
   var open = "open"; // class
   // menu open close
@@ -156,6 +157,13 @@ $(function () {
       $("#navArea").addClass("open");
     }
   });
+  $btn2.on("click", function () {
+    if ($("#news_nav").hasClass("open")) {
+      $("#news_nav").removeClass("open");
+    } else {
+      $("#news_nav").addClass("open");
+    }
+  });
 
   // mask close
   $mask.on("click", function () {
@@ -164,15 +172,26 @@ $(function () {
   $("#navArea a[href]").on("click", function (event) {
     $(".toggle_btn").trigger("click");
   });
+  $("#news_nav a[href]").on("click", function (event) {
+    $(".news_toggle_btn").trigger("click");
+  });
 
-  //   $(window).on("scroll", function () {
-  //     var scroll = $(window).scrollTop();
-  //     if (scroll >= 500) {
-  //       $(".sp_gnav_wrap").addClass("isShow");
-  //     } else {
-  //       $(".sp_gnav_wrap").removeClass("isShow");
-  //     }
-  //   });
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 200) {
+      $(".pc_gnav").addClass("isShow");
+    } else {
+      $(".pc_gnav").removeClass("isShow");
+    }
+  });
+  // $(window).on("scroll", function () {
+  //   var scroll = $(window).scrollTop();
+  //   if (scroll >= 500) {
+  //     $(".sp_gnav_wrap").addClass("isShow");
+  //   } else {
+  //     $(".sp_gnav_wrap").removeClass("isShow");
+  //   }
+  // });
 
   document.addEventListener(
     "wpcf7mailsent",

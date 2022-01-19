@@ -53,6 +53,7 @@ $base_space6: 60px;
   padding: 0 20px;
   transform: translate(-50%, -50%);
   z-index: 20;
+  padding-top: 50px;
   .main_ttl {
     font-size: 1.8rem;
   }
@@ -83,7 +84,7 @@ $base_space6: 60px;
     margin: 80px auto 60px;
   }
   @include mq(sm) {
-    margin: 16vw auto 12.5vw;
+    margin: 16vw auto 2vw;
   }
 }
 /*

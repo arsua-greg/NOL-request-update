@@ -9,7 +9,7 @@ $(".slider").slick({
   autoplaySpeed: 4000,
   dots: true,
   variableWidth: true,
-  rtl: false,
+  // rtl: false,
   responsive: [
     {
       breakpoint: 769,

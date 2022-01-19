@@ -5,6 +5,7 @@
 
     <div class="main_wrap">
         <img class="sp t_logo" src="<?php echo get_template_directory_uri(); ?>/img/top_logo.svg" alt="日本海オセアンリーグ">
+        <img class="sp t_2020" src="<?php echo get_template_directory_uri();?>/img/logo_name.svg" alt="">
         <p class="main_ttl en">News</p>
     </div>
     <div id="movie-contents">
@@ -18,6 +19,35 @@
             muted loop playsinline></video>
     </div>
 </div>
+<div id="news_nav" class="news_nav-toggle">
+    <div class="nav_single sp">
+        <div class="logo">
+            <img src="<?php echo get_template_directory_uri();?>/img/common/single_logo.svg" alt="">
+        </div>
+        <div class="news_toggle_btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="tryout_icon">
+            <a href="<?php echo home_url('/'); ?>tryout_umpire/">
+                <img src="<?php echo get_template_directory_uri();?>/img/common/try-out-icon.svg" alt="">
+            </a>
+        </div>
+    </div>
+    <nav class="pc_gnav posi_r">
+        <div class="sp_gnav_inner posi_a">
+            <a class="h_logo" href="<?php echo home_url('/'); ?>"><img
+                    src="<?php echo get_template_directory_uri(); ?>/img/common/h_logo.svg" alt="日本海オセアンリーグ"></a>
+            <ul class="sp_display_f f_wrap justify-c">
+                <li><a href="<?php echo home_url('/'); ?>news">Latest news<span>新着情報</span></a></li>
+                <li><a href="<?php echo home_url('/'); ?>company/">Company<span>会社情報</span></a></li>
+                <li><a href="<?php echo home_url('/'); ?>sponsors/">Sponsors<span>スポンサー紹介</span></a></li>
+                <li><a href="<?php echo home_url('/'); ?>job/operation/">Recruit<span>求人情報</span></a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
 <ol class="bread w1100">
     <li><a href="<?php echo home_url('/'); ?>">TOP</a></li>
     <li><a href="<?php echo get_permalink(get_page_by_path('NEWS')); ?>">新着情報</a></li>

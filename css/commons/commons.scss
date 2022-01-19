@@ -497,7 +497,7 @@ other ヘッダー
 .pc_gnav_wrap {
   position: absolute;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   top: 0;
   z-index: 100;
   .h_logo {
@@ -564,6 +564,14 @@ other ヘッダー
       }
     }
   }
+  .f_pc_gnav {
+    li {
+      &:nth-child(5) {
+        position: unset !important;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
 }
 
 /*============
@@ -592,7 +600,7 @@ nav
     opacity: 0;
     @include mq(sm) {
       height: calc(100vh - 70px);
-      bottom: 70px;
+      top: 70px;
     }
   }
   &.open nav {
@@ -733,58 +741,128 @@ nav
     height: 70px;
   }
 }
-.tryout_icon {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  background-color: $base3;
-  overflow: hidden;
-  a {
+.news_nav-toggle {
+  .nav_single {
     width: 100%;
-    height: 100%;
+    position: relative;
+    @include mq(sm) {
+      display: flex;
+    }
+
+    .logo {
+      width: 80px;
+      height: 69px;
+      display: flex;
+      background-color: #f0f0f0;
+      img {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .news_toggle_btn {
+      width: 80px;
+      background: #000;
+      height: 69px;
+      @include mq(sm) {
+        width: 80px;
+        position: relative;
+      }
+      span {
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.5s;
+        margin: 0 auto;
+        @include mq(sm) {
+          left: 15px;
+        }
+        &:nth-child(1) {
+          top: 40px;
+          position: absolute;
+        }
+        &:nth-child(2) {
+          top: 25px;
+          position: absolute;
+        }
+      }
+    }
+    .tryout_icon {
+      width: 210px;
+      height: 69px;
+      a {
+        display: inline-flex;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
   }
-  img {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    width: 125px;
-    transform: translate(-50%, 0);
+  .pc_gnav {
+    &.isShow {
+      top: 109vh;
+    }
   }
-  &::before {
-    content: "";
-    position: absolute;
+  nav {
     display: block;
-    width: 210px;
-    height: 150px;
-    top: 40px;
-    left: -30px;
-    background-color: #ffbe00;
-    border-radius: 150% 0 0 0;
-  }
-  @include mq() {
-    bottom: 0;
-    left: 160px;
-    width: calc(100vw - 160px);
-    height: 80px;
-    img {
-      top: 13px;
-      width: 155px;
-    }
-    &::before {
-      height: 100px;
-      top: 20px;
-      left: 0px;
-      width: calc(100vw - 160px);
-      border-radius: 100% 0 0 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    //height: calc(100vh - 80px);
+    bottom: 80px;
+    background: black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all 0.3s;
+    z-index: 99999;
+    opacity: 0;
+    @include mq(sm) {
+      height: calc(100vh - 70px);
+      top: 70px;
     }
   }
-  @include mq(sm) {
-    width: calc(100vw - 140px);
-    height: 70px;
-    left: 140px;
-    &::before {
-      top: 10px;
-      width: calc(100vw - 140px);
+  &.open nav {
+    opacity: 1;
+  }
+  nav .inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav .inner ul li {
+    position: relative;
+    margin: 0;
+  }
+  nav .inner ul li a {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    padding: 1em;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  nav .nav_close_btn {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 13px 0;
+    text-align: center;
+    background-color: $base2;
+  }
+}
+.open {
+  .news_toggle_btn {
+    span {
+      &:nth-child(1) {
+        transform: translateY(-5px) rotate(-315deg);
+      }
+      &:nth-child(2) {
+        transform: translateY(9px) rotate(315deg);
+      }
     }
   }
 }
@@ -792,12 +870,16 @@ nav
 .top.other_top {
   height: 500px;
   min-height: 500px;
+  @include mq(sm) {
+    z-index: 99999;
+  }
   .main_ttl {
     top: 57%;
     font-size: 5.6rem;
     font-weight: bold;
     letter-spacing: 3px;
     line-height: 1;
+    padding-top: 80px;
     span {
       display: block;
       margin-top: 30px;
@@ -819,6 +901,12 @@ nav
   margin: 0 auto;
   @include mq(sm) {
     width: 160px;
+  }
+}
+.t_2020 {
+  @include mq(sm) {
+    width: 143px;
+    margin: 0 auto;
   }
 }
 .bread {

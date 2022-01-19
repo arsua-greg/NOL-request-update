@@ -42,6 +42,7 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 20;
+  padding-top: 50px;
 }
 
 .main_wrap .main_ttl {
@@ -83,7 +84,7 @@
 
 @media screen and (max-width: 480px) {
   .logo_wrap {
-    margin: 16vw auto 12.5vw;
+    margin: 16vw auto 2vw;
   }
 }
 
