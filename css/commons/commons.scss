@@ -819,7 +819,7 @@ nav
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     transition: all 0.3s;
-    z-index: 99999;
+    z-index: 500;
     opacity: 0;
     @include mq(sm) {
       height: calc(100vh - 70px);
@@ -871,7 +871,7 @@ nav
   height: 500px;
   min-height: 500px;
   @include mq(sm) {
-    z-index: 99999;
+    z-index: 400;
   }
   .main_ttl {
     top: 57%;

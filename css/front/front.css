@@ -309,6 +309,12 @@
   z-index: 20;
 }
 
+@media screen and (max-width: 480px) {
+  .logo_name {
+    width: 150px;
+  }
+}
+
 .team_logo {
   margin-top: 30px;
   -webkit-box-align: center;

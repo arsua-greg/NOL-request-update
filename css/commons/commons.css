@@ -1020,7 +1020,7 @@ nav
   -webkit-overflow-scrolling: touch;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  z-index: 99999;
+  z-index: 500;
   opacity: 0;
 }
 
@@ -1081,7 +1081,7 @@ nav
 
 @media screen and (max-width: 480px) {
   .top.other_top {
-    z-index: 99999;
+    z-index: 400;
   }
 }
 
