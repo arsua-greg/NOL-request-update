@@ -803,12 +803,12 @@ nav
     }
   }
   .pc_gnav {
+    z-index: -1;
     &.isShow {
       top: 109vh;
-      z-index: -1;
-      @include mq(sm) {
-        z-index: 500;
-      }
+      // @include mq(sm) {
+      //   z-index: 1;
+      // }
     }
   }
   nav {
@@ -822,7 +822,7 @@ nav
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
     @include mq(sm) {
       height: calc(100vh - 70px);
@@ -832,6 +832,7 @@ nav
   }
   &.open nav {
     opacity: 1;
+    z-index: 500;
   }
   nav .inner ul {
     list-style: none;
@@ -916,6 +917,9 @@ nav
 .bread {
   font-size: 1.4rem;
   padding: 18px 30px 30px;
+  @include mq(sm) {
+    z-index: 5;
+  }
   li {
     display: inline;
     &:before {

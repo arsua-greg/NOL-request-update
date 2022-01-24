@@ -7,6 +7,7 @@
 @media only screen and (max-width: 768px) {
   .sect_news__container {
     padding: 50px 25px;
+    z-index: 600;
   }
 }
 
