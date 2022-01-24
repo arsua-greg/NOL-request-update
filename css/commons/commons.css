@@ -1006,6 +1006,13 @@ nav
 
 .news_nav-toggle .pc_gnav.isShow {
   top: 109vh;
+  z-index: -1;
+}
+
+@media screen and (max-width: 480px) {
+  .news_nav-toggle .pc_gnav.isShow {
+    z-index: 500;
+  }
 }
 
 .news_nav-toggle nav {
@@ -1065,8 +1072,8 @@ nav
 }
 
 .open .news_toggle_btn span:nth-child(1) {
-  -webkit-transform: translateY(-5px) rotate(-315deg);
-          transform: translateY(-5px) rotate(-315deg);
+  -webkit-transform: translateY(-6px) rotate(-315deg);
+          transform: translateY(-6px) rotate(-315deg);
 }
 
 .open .news_toggle_btn span:nth-child(2) {

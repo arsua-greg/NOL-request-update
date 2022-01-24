@@ -805,6 +805,10 @@ nav
   .pc_gnav {
     &.isShow {
       top: 109vh;
+      z-index: -1;
+      @include mq(sm) {
+        z-index: 500;
+      }
     }
   }
   nav {
@@ -858,7 +862,7 @@ nav
   .news_toggle_btn {
     span {
       &:nth-child(1) {
-        transform: translateY(-5px) rotate(-315deg);
+        transform: translateY(-6px) rotate(-315deg);
       }
       &:nth-child(2) {
         transform: translateY(9px) rotate(315deg);
