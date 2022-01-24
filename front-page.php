@@ -37,10 +37,14 @@
         <nav class="pc_nav">
             <ul class="display_f">
                 <li><a href="<?php echo home_url('/'); ?>news">Latest news<span>新着情報</span></a></li>
-                <li><a href="<?php echo home_url('/'); ?>job/operation/">Recruit<span>求人情報</span></a></li>
+                <li><a href="<?php echo home_url('/'); ?>job/operation/">Recruit<span>求人情報</span></a>
+                    <img class="check-mark" src="<?php echo get_template_directory_uri();?>/img/common/recruit_bg.svg"
+                        alt="">
+                </li>
                 <li><a href="<?php echo home_url('/'); ?>sponsors/">Sponsors<span>スポンサー紹介</span></a></li>
                 <li><a href="<?php echo home_url('/'); ?>company/">Company<span>会社情報</span></a></li>
                 <li><a href="<?php echo home_url('/'); ?>contact">Contact<span>お問い合わせ</span></a></li>
+
             </ul>
         </nav>
     </div>

@@ -1352,6 +1352,10 @@
   width: 100%;
 }
 
+.sect_news .post_details .post_content--details .post_ttl .tags .team {
+  display: none;
+}
+
 .sect_news .post_details .post_content--details .post_ttl .tags .nol {
   border: 2px solid #787878;
   width: 65px;

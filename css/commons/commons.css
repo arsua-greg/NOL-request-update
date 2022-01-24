@@ -1020,7 +1020,6 @@ nav
   -webkit-overflow-scrolling: touch;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  z-index: 500;
   opacity: 0;
 }
 
@@ -1028,6 +1027,7 @@ nav
   .news_nav-toggle nav {
     height: calc(100vh - 70px);
     top: 70px;
+    z-index: 500;
   }
 }
 

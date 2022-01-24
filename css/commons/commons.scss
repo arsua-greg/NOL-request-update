@@ -819,11 +819,11 @@ nav
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     transition: all 0.3s;
-    z-index: 500;
     opacity: 0;
     @include mq(sm) {
       height: calc(100vh - 70px);
       top: 70px;
+      z-index: 500;
     }
   }
   &.open nav {
