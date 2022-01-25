@@ -714,6 +714,14 @@
             margin: 0;
             padding: 10px 0 0 0;
           }
+          a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
+          }
           .link-spanner {
             position: absolute;
             width: 100%;
@@ -990,6 +998,14 @@
                 width: 80px;
               }
             }
+          }
+          a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
           }
 
           .link-spanner {
