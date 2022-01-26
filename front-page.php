@@ -108,8 +108,6 @@
                                 <?php foreach ((get_the_category()) as $cat) {
                                                 echo '<a href="'.get_category_link($cat->term_id).'"  class="'.$cat->slug.'">'.$cat->cat_name.'</a>';
                                             } ?>
-
-
                             </div>
                         </li>
                         <li class="content">
