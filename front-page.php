@@ -36,14 +36,26 @@
     <div class="sect_topics__sect_nav">
         <nav class="pc_nav">
             <ul class="display_f">
-                <li><a href="<?php echo home_url('/'); ?>news">Latest news<span>新着情報</span></a></li>
+                <li><a href="<?php echo home_url('/'); ?>news">Latest news<span>新着情報</span></a>
+                    <img class="check-mark" src="<?php echo get_template_directory_uri();?>/img/common/recruit_bg.svg"
+                        alt="">
+                </li>
                 <li><a href="<?php echo home_url('/'); ?>job/operation/">Recruit<span>求人情報</span></a>
                     <img class="check-mark" src="<?php echo get_template_directory_uri();?>/img/common/recruit_bg.svg"
                         alt="">
                 </li>
-                <li><a href="<?php echo home_url('/'); ?>sponsors/">Sponsors<span>スポンサー紹介</span></a></li>
-                <li><a href="<?php echo home_url('/'); ?>company/">Company<span>会社情報</span></a></li>
-                <li><a href="<?php echo home_url('/'); ?>contact">Contact<span>お問い合わせ</span></a></li>
+                <li><a href="<?php echo home_url('/'); ?>sponsors/">Sponsors<span>スポンサー紹介</span></a>
+                    <img class="check-mark" src="<?php echo get_template_directory_uri();?>/img/common/recruit_bg.svg"
+                        alt="">
+                </li>
+                <li><a href="<?php echo home_url('/'); ?>company/">Company<span>会社情報</span></a>
+                    <img class="check-mark" src="<?php echo get_template_directory_uri();?>/img/common/recruit_bg.svg"
+                        alt="">
+                </li>
+                <li><a href="<?php echo home_url('/'); ?>contact">Contact<span>お問い合わせ</span></a>
+                    <img class="check-mark" src="<?php echo get_template_directory_uri();?>/img/common/recruit_bg.svg"
+                        alt="">
+                </li>
 
             </ul>
         </nav>
@@ -74,12 +86,12 @@
                     ?>
                     <?php if ($the_query->have_posts()) : ?>
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <div class="post_content">
-                        <a href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></a>
-                        <div class="img">
+                    <ul class="post_content">
+                        <li href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></li>
+                        <li class="img">
                             <?php the_post_thumbnail(); ?>
-                        </div>
-                        <div class="title_cont">
+                        </li>
+                        <li class="title_cont">
                             <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
                             <div class="category">
                                 <!-- TAGS -->
@@ -99,8 +111,8 @@
 
 
                             </div>
-                        </div>
-                        <p class="content">
+                        </li>
+                        <li class="content">
                             <?php
                                         if (mb_strlen($post->post_title, 'UTF-8') > 32) {
                                             $title = str_replace('\n', '', mb_substr(strip_tags($post->post_title), 0, 32, 'UTF-8'));
@@ -109,8 +121,8 @@
                                             echo str_replace('\n', '', strip_tags($post->post_title));
                                         }
                                     ?>
-                        </p>
-                        <div class="view_all">
+                        </li>
+                        <li class="view_all">
                             <div class="btn">
                                 <a href="<?php echo the_permalink(); ?>">
                                     <p>view more</p>
@@ -118,8 +130,8 @@
                                         alt="">
                                 </a>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                     <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
@@ -157,13 +169,13 @@
                 <?php if ($the_query->have_posts()) : ?>
 
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <div class="news_cont click">
-                    <a href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></a>
-                    <div class="news_cont__title_cont">
+                <ul class="news_cont click">
+                    <li href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></li>
+                    <li class="news_cont__title_cont">
                         <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
-                    </div>
-                    <p class="content"><?php echo the_title();?></p>
-                </div>
+                    </li>
+                    <li class="content"><?php echo the_title();?></li>
+                </ul>
                 <?php endwhile; ?>
                 <?php endif; ?>
             </div>
@@ -200,8 +212,8 @@
                 <?php if ($the_query->have_posts()) : ?>
 
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <div class="news_cont__container">
-                    <div class="logo">
+                <ul class="news_cont__container">
+                    <li class="logo">
                         <?php
                                 $term = false;
                                 $terms = get_the_terms($post->ID, 'category');
@@ -220,15 +232,18 @@
                                     echo "<img src='" . get_field('cat_image', $term) . "'/>";
                                 }
                                 ?>
-                    </div>
-                    <div class="news_cont click">
-                        <a href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></a>
-                        <div class="news_cont__title_cont">
-                            <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
-                        </div>
-                        <p class="content"><?php echo the_title();?></p>
-                    </div>
-                </div>
+                    </li>
+                    <li class="news_cont click">
+                        <ul>
+                            <li href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></li>
+                            <li class="news_cont__title_cont">
+                                <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
+                            </li>
+                            <li class="content"><?php echo the_title();?></>
+                        </ul>
+
+                    </li>
+                </ul>
                 <?php endwhile; ?>
                 <?php endif; ?>
             </div>
