@@ -40,7 +40,7 @@
             <?php endif; ?>
         </div>
         <div class="news_content">
-            <div class="news_content__item">
+            <ul class="news_content__item">
                 <?php
                     $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 
@@ -57,7 +57,7 @@
                 <?php if ($the_query->have_posts()) : ?>
 
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <div class="news_content__item--cont">
+                <li class="news_content__item--cont">
                     <a href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></a>
                     <div class="title">
                         <p class="date"><?php echo get_the_date('Y.m.d'); ?></p>
@@ -90,13 +90,13 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/img/common/arrow_right_b.svg" alt="">
                         </a>
                     </div>
-                </div>
+                </li>
                 <?php endwhile; ?>
                 <div class="pagination">
                     <?php echo easy_wp_pagenavigation($the_query); ?>
                 </div>
                 <?php endif; ?>
-            </div>
+            </ul>
 
 
         </div>

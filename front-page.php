@@ -64,7 +64,7 @@
         <div class="sect_topics__container--row_1">
             <div class="sect_topics__container--row_1--content">
                 <h2>Topics</h2>
-                <div class="slider arrows">
+                <ul class="slider arrows">
                     <?php
                     $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 
@@ -86,12 +86,12 @@
                     ?>
                     <?php if ($the_query->have_posts()) : ?>
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <ul class="post_content">
-                        <li href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></li>
-                        <li class="img">
+                    <li class="post_content">
+                        <div href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></div>
+                        <div class="img">
                             <?php the_post_thumbnail(); ?>
-                        </li>
-                        <li class="title_cont">
+                        </div>
+                        <div class="title_cont">
                             <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
                             <div class="category">
                                 <!-- TAGS -->
@@ -109,8 +109,8 @@
                                                 echo '<a href="'.get_category_link($cat->term_id).'"  class="'.$cat->slug.'">'.$cat->cat_name.'</a>';
                                             } ?>
                             </div>
-                        </li>
-                        <li class="content">
+                        </div>
+                        <div class="content">
                             <?php
                                         if (mb_strlen($post->post_title, 'UTF-8') > 32) {
                                             $title = str_replace('\n', '', mb_substr(strip_tags($post->post_title), 0, 32, 'UTF-8'));
@@ -119,8 +119,8 @@
                                             echo str_replace('\n', '', strip_tags($post->post_title));
                                         }
                                     ?>
-                        </li>
-                        <li class="view_all">
+                        </div>
+                        <div class="view_all">
                             <div class="btn">
                                 <a href="<?php echo the_permalink(); ?>">
                                     <p>view more</p>
@@ -128,11 +128,11 @@
                                         alt="">
                                 </a>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </li>
                     <?php endwhile; ?>
                     <?php endif; ?>
-                </div>
+                </ul>
             </div>
         </div>
         <div class="sect_topics__container--row_2">
@@ -150,7 +150,8 @@
                     </div>
                     <p class="subtitle">リーグからのお知らせ</p>
                 </div>
-                <?php
+                <ul>
+                    <?php
                 $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 
                 $args = [
@@ -164,18 +165,19 @@
                 $the_query = new WP_Query($args);
                 ?>
 
-                <?php if ($the_query->have_posts()) : ?>
+                    <?php if ($the_query->have_posts()) : ?>
 
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <ul class="news_cont click">
-                    <li href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></li>
-                    <li class="news_cont__title_cont">
-                        <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <li class="news_cont click">
+                        <div href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></div>
+                        <div class="news_cont__title_cont">
+                            <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
+                        </div>
+                        <div class="content"><?php echo the_title();?></div>
                     </li>
-                    <li class="content"><?php echo the_title();?></li>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
                 </ul>
-                <?php endwhile; ?>
-                <?php endif; ?>
             </div>
         </div>
         <div class="sect_topics__container--row_3">
@@ -193,7 +195,8 @@
                     </div>
                     <p class="subtitle">各球団からのお知らせ</p>
                 </div>
-                <?php
+                <ul>
+                    <?php
                 $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 
                 $args = [
@@ -207,12 +210,12 @@
                 $the_query = new WP_Query($args);
                 ?>
 
-                <?php if ($the_query->have_posts()) : ?>
+                    <?php if ($the_query->have_posts()) : ?>
 
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <ul class="news_cont__container">
-                    <li class="logo">
-                        <?php
+                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <li class="news_cont__container">
+                        <div class="logo">
+                            <?php
                                 $term = false;
                                 $terms = get_the_terms($post->ID, 'category');
                                 // $terms is an array of term object
@@ -230,20 +233,20 @@
                                     echo "<img src='" . get_field('cat_image', $term) . "'/>";
                                 }
                                 ?>
+                        </div>
+                        <div class="news_cont click">
+                            <div>
+                                <div href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></div>
+                                <div class="news_cont__title_cont">
+                                    <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
+                                </div>
+                                <div class="content"><?php echo the_title();?></div>
+                            </div>
+                        </div>
                     </li>
-                    <li class="news_cont click">
-                        <ul>
-                            <li href="<?php echo the_permalink(); ?>"><span class="link-spanner"></span></li>
-                            <li class="news_cont__title_cont">
-                                <p class="ttl"><?php echo get_the_date('Y/m/d'); ?></p>
-                            </li>
-                            <li class="content"><?php echo the_title();?></>
-                        </ul>
-
-                    </li>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
                 </ul>
-                <?php endwhile; ?>
-                <?php endif; ?>
             </div>
         </div>
     </div>
